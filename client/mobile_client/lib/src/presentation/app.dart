@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:mobile_client/src/presentation/screens/cart.dart';
 
-import '../../../config/injection_container.dart';
-import 'tutorial/article/remote/remote_articles_bloc.dart';
-import 'tutorial/article/remote/remote_articles_event.dart';
+import '../../config/injection_container.dart';
+import 'bloc/tutorial/article/remote/remote_articles_bloc.dart';
+import 'bloc/tutorial/article/remote/remote_articles_event.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -31,7 +32,7 @@ class MyApp extends StatelessWidget {
             ),
           ),
           debugShowCheckedModeBanner: false,
-          home: Container()),
+          home: const CartScreen()),
     );
   }
 }
