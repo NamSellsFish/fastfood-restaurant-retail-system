@@ -1,7 +1,7 @@
 import '../../util/data_state.dart';
-import '../../util/use_case.dart';
 import '../entities/line_item.dart';
 import '../repository/line_item_repository.dart';
+import 'usecase.dart';
 
 class GetLineItemsUseCase
     implements UseCase<DataState<List<LineItemEntity>>, void> {

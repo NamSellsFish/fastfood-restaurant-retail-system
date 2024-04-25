@@ -18,5 +18,5 @@ Future<void> initializeDependencies() async {
 
   sl.registerSingleton<GetLineItemsUseCase>(GetLineItemsUseCase(sl()));
 
-  sl.registerFactory<LineItemEntityBloc>(() => LineItemEntityBloc(sl()));
+  //sl.registerFactory<LineItemEntityBloc>(() => LineItemEntityBloc(sl()));
 }
