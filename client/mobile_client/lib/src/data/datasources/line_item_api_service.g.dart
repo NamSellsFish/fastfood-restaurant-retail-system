@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'article_api_service.dart';
+part of 'line_item_api_service.dart';
 
 // **************************************************************************
 // RetrofitGenerator
@@ -8,12 +8,12 @@ part of 'article_api_service.dart';
 
 // ignore_for_file: unnecessary_brace_in_string_interps,no_leading_underscores_for_local_identifiers
 
-class _ArticleApiService implements ArticleApiService {
-  _ArticleApiService(
+class _LineItemApiService implements LineItemApiService {
+  _LineItemApiService(
     this._dio, {
     this.baseUrl,
   }) {
-    baseUrl ??= 'https://newsapi.org/v2';
+    baseUrl ??= 'http://10.0.2.2:3000/';
   }
 
   final Dio _dio;
@@ -21,29 +21,20 @@ class _ArticleApiService implements ArticleApiService {
   String? baseUrl;
 
   @override
-  Future<HttpResponse<List<ArticleModel>>> getArticles({
-    String? apiKey,
-    String? country,
-    String? category,
-  }) async {
+  Future<HttpResponse<List<LineItemModel>>> getLineItems() async {
     final _extra = <String, dynamic>{};
-    final queryParameters = <String, dynamic>{
-      r'apiKey': apiKey,
-      r'country': country,
-      r'category': category,
-    };
-    queryParameters.removeWhere((k, v) => v == null);
+    final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<HttpResponse<List<ArticleModel>>>(Options(
+    final _result = await _dio.fetch<List<dynamic>>(
+        _setStreamType<HttpResponse<List<LineItemModel>>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
     )
             .compose(
               _dio.options,
-              '/top-headlines',
+              '/line-items',
               queryParameters: queryParameters,
               data: _data,
             )
@@ -52,8 +43,8 @@ class _ArticleApiService implements ArticleApiService {
               _dio.options.baseUrl,
               baseUrl,
             ))));
-    List<ArticleModel> value = _result.data!['article']
-        .map((dynamic i) => ArticleModel.fromJson(i as Map<String, dynamic>))
+    var value = _result.data!
+        .map((dynamic i) => LineItemModel.fromJson(i as Map<String, dynamic>))
         .toList();
     final httpResponse = HttpResponse(value, _result);
     return httpResponse;
