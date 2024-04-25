@@ -1,0 +1,8 @@
+com.example.mobile_client.app-debug-0 C:\Users\Lenovo\Desktop\mobile_client\android\app\src\debug\res
+com.example.mobile_client.app-main-1 C:\Users\Lenovo\Desktop\mobile_client\android\app\src\main\res
+com.example.mobile_client.app-pngs-2 C:\Users\Lenovo\Desktop\mobile_client\build\app\generated\res\pngs\debug
+com.example.mobile_client.app-resValues-3 C:\Users\Lenovo\Desktop\mobile_client\build\app\generated\res\resValues\debug
+com.example.mobile_client.app-rs-4 C:\Users\Lenovo\Desktop\mobile_client\build\app\generated\res\rs\debug
+com.example.mobile_client.app-mergeDebugResources-5 C:\Users\Lenovo\Desktop\mobile_client\build\app\intermediates\incremental\debug\mergeDebugResources\merged.dir
+com.example.mobile_client.app-mergeDebugResources-6 C:\Users\Lenovo\Desktop\mobile_client\build\app\intermediates\incremental\debug\mergeDebugResources\stripped.dir
+com.example.mobile_client.app-merged_res-7 C:\Users\Lenovo\Desktop\mobile_client\build\app\intermediates\merged_res\debug

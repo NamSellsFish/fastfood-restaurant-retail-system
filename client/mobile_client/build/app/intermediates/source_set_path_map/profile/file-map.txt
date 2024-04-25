@@ -1,0 +1,8 @@
+com.example.mobile_client.app-main-0 C:\Users\Lenovo\Desktop\mobile_client\android\app\src\main\res
+com.example.mobile_client.app-profile-1 C:\Users\Lenovo\Desktop\mobile_client\android\app\src\profile\res
+com.example.mobile_client.app-pngs-2 C:\Users\Lenovo\Desktop\mobile_client\build\app\generated\res\pngs\profile
+com.example.mobile_client.app-resValues-3 C:\Users\Lenovo\Desktop\mobile_client\build\app\generated\res\resValues\profile
+com.example.mobile_client.app-rs-4 C:\Users\Lenovo\Desktop\mobile_client\build\app\generated\res\rs\profile
+com.example.mobile_client.app-mergeProfileResources-5 C:\Users\Lenovo\Desktop\mobile_client\build\app\intermediates\incremental\profile\mergeProfileResources\merged.dir
+com.example.mobile_client.app-mergeProfileResources-6 C:\Users\Lenovo\Desktop\mobile_client\build\app\intermediates\incremental\profile\mergeProfileResources\stripped.dir
+com.example.mobile_client.app-merged_res-7 C:\Users\Lenovo\Desktop\mobile_client\build\app\intermediates\merged_res\profile

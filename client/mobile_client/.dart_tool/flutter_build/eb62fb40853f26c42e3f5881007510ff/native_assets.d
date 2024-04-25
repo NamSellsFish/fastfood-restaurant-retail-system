@@ -1,0 +1,1 @@
+ C:\\Users\\Lenovo\\source\\repos\\fastfood-restaurant-retail-system\\client\\mobile_client\\.dart_tool\\flutter_build\\eb62fb40853f26c42e3f5881007510ff\\native_assets.yaml: 
