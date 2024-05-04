@@ -1,7 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
-    <uses-permission android:name="android.permission.INTERNET"/>
     <application
-        android:label="mobile_client"
+        android:label="fast_food_plus"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

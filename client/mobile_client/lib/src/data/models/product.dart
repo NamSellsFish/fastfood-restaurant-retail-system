@@ -1,22 +1,65 @@
-import 'package:json_annotation/json_annotation.dart';
-import '../../domain/entities/product.dart';
-part 'product.g.dart';
+import 'dart:convert';
 
-@JsonSerializable()
-class ProductModel extends ProductEntity {
-  const ProductModel({
-    super.id,
-    super.name,
-    super.description,
-    super.price,
-    super.urlToImage,
-    super.dateAdded,
-    super.dateUpdated,
-    super.category,
-  });
+import 'package:equatable/equatable.dart';
+import 'package:flutter_amazon_clone_bloc/src/data/models/rating.dart';
 
-  factory ProductModel.fromJson(Map<String, dynamic> json) =>
-      _$ProductModelFromJson(json);
+class Product extends Equatable {
+  final String name;
+  final String description;
+  final int quantity;
+  final List<String> images;
+  final String category;
+  final double price;
+  final String? id;
+  final List<Rating>? rating;
 
-  Map<String, dynamic> toJson() => _$ProductModelToJson(this);
+  const Product(
+      {required this.name,
+      required this.description,
+      required this.quantity,
+      required this.images,
+      required this.category,
+      required this.price,
+      this.id,
+      this.rating});
+
+  Map<String, dynamic> toMap() {
+    return {
+      'name': name,
+      'description': description,
+      'quantity': quantity,
+      'images': images,
+      'category': category,
+      'price': price,
+      'id': id,
+      'rating': rating,
+    };
+  }
+
+  factory Product.fromMap(Map<String, dynamic> map) {
+    return Product(
+        name: map['name'] ?? '',
+        description: map['description'] ?? '',
+        quantity: map['quantity']?.toInt() ?? 0,
+        images: List<String>.from(map['images']),
+        category: map['category'] ?? '',
+        price: map['price']?.toDouble() ?? 0.0,
+        id: map['_id'],
+        rating: map['ratings'] != null
+            ? List<Rating>.from(
+                map['ratings']?.map(
+                  (x) => Rating.fromMap(x),
+                ),
+              )
+            : null);
+  }
+
+  String toJson() => json.encode(toMap());
+
+  factory Product.fromJson(String source) =>
+      Product.fromMap(json.decode(source));
+
+  @override
+  List<Object?> get props =>
+      [name, description, quantity, images, category, price, id, rating];
 }
