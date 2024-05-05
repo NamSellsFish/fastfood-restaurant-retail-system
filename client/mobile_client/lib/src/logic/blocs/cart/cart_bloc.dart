@@ -36,7 +36,7 @@ class CartBloc extends Bloc<CartEvent, CartState> {
     productsQuantity = items[1] as List<int>;
 
     saveForLaterProducts = await userRepository.getSaveForLater();
-
+    // TODO: Calculate cart total
     for (int i = 0; i < cartProducts.length; i++) {
       sum += cartProducts[i].price * productsQuantity[i];
 
