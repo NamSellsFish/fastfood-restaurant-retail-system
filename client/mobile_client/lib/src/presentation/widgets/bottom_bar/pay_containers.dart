@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_amazon_clone_bloc/src/utils/utils.dart';
+import '/src/utils/utils.dart';
 
 class PayContainers extends StatelessWidget {
   const PayContainers({

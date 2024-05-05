@@ -2,13 +2,13 @@ import 'dart:io';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_amazon_clone_bloc/src/logic/blocs/admin/admin_add_products/add_product_images/admin_add_products_images_bloc.dart';
-import 'package:flutter_amazon_clone_bloc/src/logic/blocs/admin/admin_add_products/select_category_cubit/admin_add_select_category_cubit.dart';
-import 'package:flutter_amazon_clone_bloc/src/logic/blocs/admin/admin_add_products/sell_product_cubit/admin_sell_product_cubit.dart';
-import 'package:flutter_amazon_clone_bloc/src/presentation/widgets/common_widgets/custom_elevated_button.dart';
-import 'package:flutter_amazon_clone_bloc/src/presentation/widgets/common_widgets/custom_textfield.dart';
-import 'package:flutter_amazon_clone_bloc/src/utils/constants/constants.dart';
-import 'package:flutter_amazon_clone_bloc/src/utils/utils.dart';
+import '/src/logic/blocs/admin/admin_add_products/add_product_images/admin_add_products_images_bloc.dart';
+import '/src/logic/blocs/admin/admin_add_products/select_category_cubit/admin_add_select_category_cubit.dart';
+import '/src/logic/blocs/admin/admin_add_products/sell_product_cubit/admin_sell_product_cubit.dart';
+import '/src/presentation/widgets/common_widgets/custom_elevated_button.dart';
+import '/src/presentation/widgets/common_widgets/custom_textfield.dart';
+import '/src/utils/constants/constants.dart';
+import '/src/utils/utils.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class AdminAddProductScreen extends StatefulWidget {

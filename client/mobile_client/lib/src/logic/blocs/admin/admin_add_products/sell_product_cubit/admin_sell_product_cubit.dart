@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:flutter_amazon_clone_bloc/src/data/repositories/admin_repository.dart';
+import '/src/data/repositories/admin_repository.dart';
 
 part 'admin_sell_product_state.dart';
 

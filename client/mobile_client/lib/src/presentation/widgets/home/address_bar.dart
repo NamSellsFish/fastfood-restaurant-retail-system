@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_amazon_clone_bloc/src/data/models/user.dart';
-import 'package:flutter_amazon_clone_bloc/src/logic/blocs/user_cubit/user_cubit.dart';
-import 'package:flutter_amazon_clone_bloc/src/utils/constants/constants.dart';
+import '/src/data/models/user.dart';
+import '/src/logic/blocs/user_cubit/user_cubit.dart';
+import '/src/utils/constants/constants.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class AddressBar extends StatelessWidget {

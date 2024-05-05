@@ -1,7 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_amazon_clone_bloc/src/logic/blocs/home_blocs/carousel_bloc/carousel_image_bloc.dart';
-import 'package:flutter_amazon_clone_bloc/src/utils/constants/constants.dart';
+import '/src/logic/blocs/home_blocs/carousel_bloc/carousel_image_bloc.dart';
+import '/src/utils/constants/constants.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'bottom_offers.dart';

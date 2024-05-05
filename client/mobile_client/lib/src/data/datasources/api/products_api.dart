@@ -1,5 +1,5 @@
-import 'package:flutter_amazon_clone_bloc/src/utils/constants/strings.dart';
-import 'package:flutter_amazon_clone_bloc/src/utils/utils.dart';
+import '/src/utils/constants/strings.dart';
+import '/src/utils/utils.dart';
 import 'package:http/http.dart' as http;
 
 class ProductsApi {

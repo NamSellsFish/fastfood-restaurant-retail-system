@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_amazon_clone_bloc/src/config/router/app_route_constants.dart';
-import 'package:flutter_amazon_clone_bloc/src/logic/blocs/admin/admin_fetch_category_products/admin_fetch_category_products_bloc.dart';
-import 'package:flutter_amazon_clone_bloc/src/presentation/views/admin/admin_home_screen.dart';
-import 'package:flutter_amazon_clone_bloc/src/presentation/widgets/account/single_product.dart';
-import 'package:flutter_amazon_clone_bloc/src/presentation/widgets/common_widgets/custom_app_bar.dart';
-import 'package:flutter_amazon_clone_bloc/src/utils/utils.dart';
+import '/src/config/router/app_route_constants.dart';
+import '/src/logic/blocs/admin/admin_fetch_category_products/admin_fetch_category_products_bloc.dart';
+import '/src/presentation/views/admin/admin_home_screen.dart';
+import '/src/presentation/widgets/account/single_product.dart';
+import '/src/presentation/widgets/common_widgets/custom_app_bar.dart';
+import '/src/utils/utils.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 

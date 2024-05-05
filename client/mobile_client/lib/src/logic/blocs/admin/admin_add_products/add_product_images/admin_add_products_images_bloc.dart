@@ -3,7 +3,7 @@ import 'dart:io';
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:file_picker/file_picker.dart';
-import 'package:flutter_amazon_clone_bloc/src/data/repositories/admin_repository.dart';
+import '/src/data/repositories/admin_repository.dart';
 
 part 'admin_add_products_images_event.dart';
 part 'admin_add_products_images_state.dart';

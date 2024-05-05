@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_amazon_clone_bloc/src/data/models/product.dart';
-import 'package:flutter_amazon_clone_bloc/src/presentation/widgets/common_widgets/stars.dart';
+import '/src/data/models/product.dart';
+import '/src/presentation/widgets/common_widgets/stars.dart';
 
 class CustomerReviews extends StatelessWidget {
   const CustomerReviews({

@@ -1,8 +1,8 @@
 import 'dart:convert';
 
-import 'package:flutter_amazon_clone_bloc/src/data/datasources/api/account_apis.dart';
-import 'package:flutter_amazon_clone_bloc/src/data/models/order.dart';
-import 'package:flutter_amazon_clone_bloc/src/data/models/product.dart';
+import '/src/data/datasources/api/account_apis.dart';
+import '/src/data/models/order.dart';
+import '/src/data/models/product.dart';
 import 'package:http/http.dart' as http;
 
 class AccountRepository {

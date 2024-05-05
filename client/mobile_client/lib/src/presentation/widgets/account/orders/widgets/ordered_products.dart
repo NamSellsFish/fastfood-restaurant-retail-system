@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_amazon_clone_bloc/src/presentation/views/account/orders/order_details.dart';
-import 'package:flutter_amazon_clone_bloc/src/utils/utils.dart';
+import '/src/presentation/views/account/orders/order_details.dart';
+import '/src/utils/utils.dart';
 
 class OrderedProducts extends StatelessWidget {
   const OrderedProducts({

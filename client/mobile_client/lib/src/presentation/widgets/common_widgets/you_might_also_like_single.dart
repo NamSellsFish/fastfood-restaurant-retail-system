@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_amazon_clone_bloc/src/data/models/product.dart';
-import 'package:flutter_amazon_clone_bloc/src/presentation/widgets/common_widgets/stars.dart';
-import 'package:flutter_amazon_clone_bloc/src/utils/constants/constants.dart';
-import 'package:flutter_amazon_clone_bloc/src/utils/utils.dart';
+import '/src/data/models/product.dart';
+import '/src/presentation/widgets/common_widgets/stars.dart';
+import '/src/utils/constants/constants.dart';
+import '/src/utils/utils.dart';
 
 class YouMightAlsoLikeSingle extends StatelessWidget {
   const YouMightAlsoLikeSingle({

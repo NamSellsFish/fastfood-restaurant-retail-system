@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_amazon_clone_bloc/src/config/router/app_route_constants.dart';
-import 'package:flutter_amazon_clone_bloc/src/logic/blocs/admin/admin_add_offers/four-images-offer/admin_four_image_offer_cubit.dart';
-import 'package:flutter_amazon_clone_bloc/src/presentation/views/admin/admin_home_screen.dart';
-import 'package:flutter_amazon_clone_bloc/src/presentation/widgets/admin/admin_four_images_offer.dart';
-import 'package:flutter_amazon_clone_bloc/src/utils/utils.dart';
+import '/src/config/router/app_route_constants.dart';
+import '/src/logic/blocs/admin/admin_add_offers/four-images-offer/admin_four_image_offer_cubit.dart';
+import '/src/presentation/views/admin/admin_home_screen.dart';
+import '/src/presentation/widgets/admin/admin_four_images_offer.dart';
+import '/src/utils/utils.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 

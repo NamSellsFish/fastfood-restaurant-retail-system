@@ -1,14 +1,14 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_amazon_clone_bloc/src/config/router/app_route_constants.dart';
-import 'package:flutter_amazon_clone_bloc/src/data/models/order.dart';
-import 'package:flutter_amazon_clone_bloc/src/data/models/user.dart';
-import 'package:flutter_amazon_clone_bloc/src/presentation/widgets/account/orders/widgets/tracking_details_bottom_sheet.dart';
-import 'package:flutter_amazon_clone_bloc/src/presentation/widgets/account/orders/widgets/you_might_also_like_block.dart';
-import 'package:flutter_amazon_clone_bloc/src/presentation/widgets/common_widgets/custom_app_bar.dart';
-import 'package:flutter_amazon_clone_bloc/src/presentation/widgets/common_widgets/divider_with_sizedbox.dart';
-import 'package:flutter_amazon_clone_bloc/src/utils/constants/constants.dart';
-import 'package:flutter_amazon_clone_bloc/src/utils/utils.dart';
+import '/src/config/router/app_route_constants.dart';
+import '/src/data/models/order.dart';
+import '/src/data/models/user.dart';
+import '/src/presentation/widgets/account/orders/widgets/tracking_details_bottom_sheet.dart';
+import '/src/presentation/widgets/account/orders/widgets/you_might_also_like_block.dart';
+import '/src/presentation/widgets/common_widgets/custom_app_bar.dart';
+import '/src/presentation/widgets/common_widgets/divider_with_sizedbox.dart';
+import '/src/utils/constants/constants.dart';
+import '/src/utils/utils.dart';
 import 'package:go_router/go_router.dart';
 
 class TrackingDetailsScreen extends StatelessWidget {
@@ -93,7 +93,7 @@ class TrackingDetailsScreen extends StatelessWidget {
                           sB2Height: 20,
                         ),
                         const Text(
-                          'Delivery by Amazon',
+                          'Delivery by FastFood+',
                           style: TextStyle(
                               fontSize: 16,
                               fontWeight: FontWeight.w500,

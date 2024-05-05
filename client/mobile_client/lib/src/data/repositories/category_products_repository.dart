@@ -1,8 +1,8 @@
 import 'dart:convert';
 
-import 'package:flutter_amazon_clone_bloc/src/data/models/product.dart';
+import '/src/data/models/product.dart';
 import 'package:http/http.dart' as http;
-import 'package:flutter_amazon_clone_bloc/src/data/datasources/api/category_products_api.dart';
+import '/src/data/datasources/api/category_products_api.dart';
 
 class CategoryProductsRepository {
   final CategoryProductsApi categoryProductsApi = CategoryProductsApi();

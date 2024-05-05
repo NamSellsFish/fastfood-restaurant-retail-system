@@ -1,8 +1,8 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:flutter_amazon_clone_bloc/src/data/models/product.dart';
-import 'package:flutter_amazon_clone_bloc/src/data/models/user.dart';
-import 'package:flutter_amazon_clone_bloc/src/data/repositories/user_repository.dart';
+import '/src/data/models/product.dart';
+import '/src/data/models/user.dart';
+import '/src/data/repositories/user_repository.dart';
 import 'package:pay/pay.dart';
 
 part 'place_order_buy_now_state.dart';

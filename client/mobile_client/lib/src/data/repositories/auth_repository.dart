@@ -1,6 +1,6 @@
 import 'dart:convert';
-import 'package:flutter_amazon_clone_bloc/src/data/datasources/api/auth_api.dart';
-import 'package:flutter_amazon_clone_bloc/src/data/models/user.dart';
+import '/src/data/datasources/api/auth_api.dart';
+import '/src/data/models/user.dart';
 import 'package:http/http.dart' as http;
 
 class AuthRepository {

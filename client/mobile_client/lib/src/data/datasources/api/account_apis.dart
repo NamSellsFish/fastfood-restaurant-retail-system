@@ -1,8 +1,8 @@
 import 'dart:convert';
 
-import 'package:flutter_amazon_clone_bloc/src/data/models/product.dart';
-import 'package:flutter_amazon_clone_bloc/src/utils/constants/strings.dart';
-import 'package:flutter_amazon_clone_bloc/src/utils/utils.dart';
+import '/src/data/models/product.dart';
+import '/src/utils/constants/strings.dart';
+import '/src/utils/utils.dart';
 import 'package:http/http.dart' as http;
 
 class AccountApis {

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_amazon_clone_bloc/src/presentation/widgets/home/single_image_offer.dart';
+import '/src/presentation/widgets/home/single_image_offer.dart';
 
 class Constants {
 // COLORS
@@ -321,7 +321,7 @@ class Constants {
     {
       'category': 'Spaghetti',
       'image':
-          'https://res.cloudinary.com/dthljz11q/image/upload/v1699264800/bottom_offers/v3nc5x9boosqlkbz2nrj.png',
+          'https://i.pinimg.com/736x/e8/f9/94/e8f99442254db9c938a0637e66b6ceb7.jpg',
     },
     {
       'category': 'Pizza',

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_amazon_clone_bloc/src/logic/blocs/admin/admin_get_analytics/admin_get_analytics_cubit.dart';
-import 'package:flutter_amazon_clone_bloc/src/utils/utils.dart';
+import '/src/logic/blocs/admin/admin_get_analytics/admin_get_analytics_cubit.dart';
+import '/src/utils/utils.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:intl/intl.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';

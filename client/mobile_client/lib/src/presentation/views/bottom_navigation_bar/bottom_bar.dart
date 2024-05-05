@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_amazon_clone_bloc/src/logic/blocs/bottom_bar/bottom_bar_bloc.dart';
-import 'package:flutter_amazon_clone_bloc/src/logic/blocs/cart/cart_bloc.dart';
-import 'package:flutter_amazon_clone_bloc/src/logic/blocs/user_cubit/user_cubit.dart';
-import 'package:flutter_amazon_clone_bloc/src/presentation/views/account/account_screen.dart';
-import 'package:flutter_amazon_clone_bloc/src/presentation/views/another_screen.dart';
-import 'package:flutter_amazon_clone_bloc/src/presentation/views/cart/cart_screen.dart';
-import 'package:flutter_amazon_clone_bloc/src/presentation/views/home/home_screen.dart';
-import 'package:flutter_amazon_clone_bloc/src/presentation/views/menu/menu_screen.dart';
-import 'package:flutter_amazon_clone_bloc/src/presentation/widgets/bottom_bar/custom_bottom_nav_bar.dart';
-import 'package:flutter_amazon_clone_bloc/src/presentation/widgets/bottom_bar/custom_bottom_sheet.dart';
-import 'package:flutter_amazon_clone_bloc/src/utils/constants/constants.dart';
+import '/src/logic/blocs/bottom_bar/bottom_bar_bloc.dart';
+import '/src/logic/blocs/cart/cart_bloc.dart';
+import '/src/logic/blocs/user_cubit/user_cubit.dart';
+import '/src/presentation/views/account/account_screen.dart';
+import '/src/presentation/views/another_screen.dart';
+import '/src/presentation/views/cart/cart_screen.dart';
+import '/src/presentation/views/home/home_screen.dart';
+import '/src/presentation/views/menu/menu_screen.dart';
+import '/src/presentation/widgets/bottom_bar/custom_bottom_nav_bar.dart';
+import '/src/presentation/widgets/bottom_bar/custom_bottom_sheet.dart';
+import '/src/utils/constants/constants.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 // ignore: must_be_immutable

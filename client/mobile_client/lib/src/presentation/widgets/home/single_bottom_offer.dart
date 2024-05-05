@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_amazon_clone_bloc/src/presentation/widgets/home/single_top_category_item.dart';
-import 'package:flutter_amazon_clone_bloc/src/utils/constants/constants.dart';
+import '/src/presentation/widgets/home/single_top_category_item.dart';
+import '/src/utils/constants/constants.dart';
 
 class SingleBottomOffer extends StatelessWidget {
   const SingleBottomOffer({

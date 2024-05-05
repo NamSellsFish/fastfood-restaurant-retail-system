@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_amazon_clone_bloc/src/config/router/app_route_constants.dart';
-import 'package:flutter_amazon_clone_bloc/src/presentation/widgets/account/account_button.dart';
-import 'package:flutter_amazon_clone_bloc/src/utils/utils.dart';
+import '/src/config/router/app_route_constants.dart';
+import '/src/presentation/widgets/account/account_button.dart';
+import '/src/utils/utils.dart';
 import 'package:go_router/go_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 

@@ -2,8 +2,8 @@ import 'dart:io';
 
 import 'package:camera_camera/camera_camera.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_amazon_clone_bloc/src/presentation/widgets/bottom_bar/pay_containers.dart';
-import 'package:flutter_amazon_clone_bloc/src/utils/constants/constants.dart';
+import '/src/presentation/widgets/bottom_bar/pay_containers.dart';
+import '/src/utils/constants/constants.dart';
 
 class CustomBottomSheet extends StatefulWidget {
   const CustomBottomSheet({

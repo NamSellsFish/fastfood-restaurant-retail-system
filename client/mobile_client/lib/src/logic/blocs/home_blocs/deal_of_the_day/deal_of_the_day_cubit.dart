@@ -1,7 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:flutter_amazon_clone_bloc/src/data/models/product.dart';
-import 'package:flutter_amazon_clone_bloc/src/data/repositories/products_repository.dart';
+import '/src/data/models/product.dart';
+import '/src/data/repositories/products_repository.dart';
 
 part 'deal_of_the_day_state.dart';
 

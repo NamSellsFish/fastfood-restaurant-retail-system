@@ -1,8 +1,8 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_amazon_clone_bloc/src/config/router/app_route_constants.dart';
-import 'package:flutter_amazon_clone_bloc/src/data/models/order.dart';
-import 'package:flutter_amazon_clone_bloc/src/utils/utils.dart';
+import '/src/config/router/app_route_constants.dart';
+import '/src/data/models/order.dart';
+import '/src/utils/utils.dart';
 import 'package:go_router/go_router.dart';
 
 class OrderListSingle extends StatelessWidget {

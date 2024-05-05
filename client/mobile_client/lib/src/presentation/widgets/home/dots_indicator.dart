@@ -1,6 +1,6 @@
 import 'package:carousel_slider/carousel_controller.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_amazon_clone_bloc/src/utils/constants/constants.dart';
+import '/src/utils/constants/constants.dart';
 
 class DotsIndicatorMap extends StatelessWidget {
   const DotsIndicatorMap({

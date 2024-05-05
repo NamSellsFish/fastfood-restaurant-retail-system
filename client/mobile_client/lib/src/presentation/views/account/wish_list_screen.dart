@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_amazon_clone_bloc/src/data/models/product.dart';
-import 'package:flutter_amazon_clone_bloc/src/logic/blocs/account/wish_list/wish_list_cubit.dart';
-import 'package:flutter_amazon_clone_bloc/src/presentation/widgets/account/single_wish_list_product.dart';
-import 'package:flutter_amazon_clone_bloc/src/presentation/widgets/common_widgets/custom_app_bar.dart';
-import 'package:flutter_amazon_clone_bloc/src/utils/utils.dart';
+import '/src/data/models/product.dart';
+import '/src/logic/blocs/account/wish_list/wish_list_cubit.dart';
+import '/src/presentation/widgets/account/single_wish_list_product.dart';
+import '/src/presentation/widgets/common_widgets/custom_app_bar.dart';
+import '/src/utils/utils.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class WishListScreen extends StatelessWidget {

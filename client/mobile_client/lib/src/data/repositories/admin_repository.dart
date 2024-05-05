@@ -1,12 +1,12 @@
 import 'dart:convert';
 import 'dart:io';
 import 'package:cloudinary_public/cloudinary_public.dart';
-import 'package:flutter_amazon_clone_bloc/src/data/datasources/api/admin_api.dart';
-import 'package:flutter_amazon_clone_bloc/src/data/models/four_images_offer.dart';
-import 'package:flutter_amazon_clone_bloc/src/data/models/order.dart';
-import 'package:flutter_amazon_clone_bloc/src/data/models/product.dart';
-import 'package:flutter_amazon_clone_bloc/src/data/models/sales.dart';
-import 'package:flutter_amazon_clone_bloc/src/utils/utils.dart';
+import '/src/data/datasources/api/admin_api.dart';
+import '/src/data/models/four_images_offer.dart';
+import '/src/data/models/order.dart';
+import '/src/data/models/product.dart';
+import '/src/data/models/sales.dart';
+import '/src/utils/utils.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:http/http.dart' as http;
 

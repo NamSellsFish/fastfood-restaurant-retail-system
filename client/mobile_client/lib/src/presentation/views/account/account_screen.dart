@@ -1,14 +1,14 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_amazon_clone_bloc/src/config/router/app_route_constants.dart';
-import 'package:flutter_amazon_clone_bloc/src/logic/blocs/account/fetch_account_screen_data/fetch_account_screen_data_cubit.dart';
-import 'package:flutter_amazon_clone_bloc/src/presentation/widgets/account/account_screen_app_bar.dart';
-import 'package:flutter_amazon_clone_bloc/src/presentation/widgets/account/name_bar.dart';
-import 'package:flutter_amazon_clone_bloc/src/presentation/widgets/account/single_product.dart';
-import 'package:flutter_amazon_clone_bloc/src/presentation/widgets/account/top_buttons.dart';
-import 'package:flutter_amazon_clone_bloc/src/presentation/widgets/common_widgets/divider_with_sizedbox.dart';
-import 'package:flutter_amazon_clone_bloc/src/utils/constants/constants.dart';
-import 'package:flutter_amazon_clone_bloc/src/utils/utils.dart';
+import '/src/config/router/app_route_constants.dart';
+import '/src/logic/blocs/account/fetch_account_screen_data/fetch_account_screen_data_cubit.dart';
+import '/src/presentation/widgets/account/account_screen_app_bar.dart';
+import '/src/presentation/widgets/account/name_bar.dart';
+import '/src/presentation/widgets/account/single_product.dart';
+import '/src/presentation/widgets/account/top_buttons.dart';
+import '/src/presentation/widgets/common_widgets/divider_with_sizedbox.dart';
+import '/src/utils/constants/constants.dart';
+import '/src/utils/utils.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 

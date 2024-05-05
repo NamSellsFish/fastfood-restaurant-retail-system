@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_amazon_clone_bloc/src/data/models/product.dart';
-import 'package:flutter_amazon_clone_bloc/src/logic/blocs/cart/cart_bloc.dart';
-import 'package:flutter_amazon_clone_bloc/src/logic/blocs/category_products/fetch_category_products_bloc/fetch_category_products_bloc.dart';
-import 'package:flutter_amazon_clone_bloc/src/presentation/widgets/cart/add_to_card_offer.dart';
-import 'package:flutter_amazon_clone_bloc/src/utils/constants/constants.dart';
-import 'package:flutter_amazon_clone_bloc/src/utils/utils.dart';
+import '/src/data/models/product.dart';
+import '/src/logic/blocs/cart/cart_bloc.dart';
+import '/src/logic/blocs/category_products/fetch_category_products_bloc/fetch_category_products_bloc.dart';
+import '/src/presentation/widgets/cart/add_to_card_offer.dart';
+import '/src/utils/constants/constants.dart';
+import '/src/utils/utils.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'custom_text_button.dart';

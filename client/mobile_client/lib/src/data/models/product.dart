@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:equatable/equatable.dart';
-import 'package:flutter_amazon_clone_bloc/src/data/models/rating.dart';
+import '/src/data/models/rating.dart';
 
 class Product extends Equatable {
   final String name;

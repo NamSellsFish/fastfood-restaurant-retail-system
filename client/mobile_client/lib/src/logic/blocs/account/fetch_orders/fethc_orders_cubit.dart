@@ -1,7 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:flutter_amazon_clone_bloc/src/data/models/order.dart';
-import 'package:flutter_amazon_clone_bloc/src/data/repositories/account_repository.dart';
+import '/src/data/models/order.dart';
+import '/src/data/repositories/account_repository.dart';
 
 part 'fetch_ordres_state.dart';
 

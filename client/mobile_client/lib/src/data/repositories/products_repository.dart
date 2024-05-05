@@ -1,7 +1,7 @@
 import 'dart:convert';
 
-import 'package:flutter_amazon_clone_bloc/src/data/datasources/api/products_api.dart';
-import 'package:flutter_amazon_clone_bloc/src/data/models/product.dart';
+import '/src/data/datasources/api/products_api.dart';
+import '/src/data/models/product.dart';
 import 'package:http/http.dart' as http;
 
 class ProductsRepository {

@@ -1,7 +1,7 @@
 import 'dart:convert';
 
-import 'package:flutter_amazon_clone_bloc/src/data/models/user.dart';
-import 'package:flutter_amazon_clone_bloc/src/utils/constants/strings.dart';
+import '/src/data/models/user.dart';
+import '/src/utils/constants/strings.dart';
 import 'package:http/http.dart' as http;
 
 class AuthAPI {

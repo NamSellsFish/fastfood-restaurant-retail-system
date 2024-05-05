@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_amazon_clone_bloc/src/logic/blocs/user_cubit/user_cubit.dart';
-import 'package:flutter_amazon_clone_bloc/src/utils/utils.dart';
+import '/src/logic/blocs/user_cubit/user_cubit.dart';
+import '/src/utils/utils.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class NameBar extends StatelessWidget {

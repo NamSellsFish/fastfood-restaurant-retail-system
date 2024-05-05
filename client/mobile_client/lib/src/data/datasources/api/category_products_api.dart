@@ -1,4 +1,4 @@
-import 'package:flutter_amazon_clone_bloc/src/utils/utils.dart';
+import '/src/utils/utils.dart';
 import 'package:http/http.dart' as http;
 import '../../../utils/constants/strings.dart';
 

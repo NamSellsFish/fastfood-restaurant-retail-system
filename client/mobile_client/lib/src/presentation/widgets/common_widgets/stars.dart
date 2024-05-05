@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_amazon_clone_bloc/src/utils/constants/constants.dart';
+import '/src/utils/constants/constants.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
 class Stars extends StatelessWidget {

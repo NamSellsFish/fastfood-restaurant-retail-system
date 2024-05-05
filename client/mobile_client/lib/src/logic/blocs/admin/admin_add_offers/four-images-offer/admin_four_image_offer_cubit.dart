@@ -2,8 +2,8 @@ import 'dart:io';
 
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:flutter_amazon_clone_bloc/src/data/models/four_images_offer.dart';
-import 'package:flutter_amazon_clone_bloc/src/data/repositories/admin_repository.dart';
+import '/src/data/models/four_images_offer.dart';
+import '/src/data/repositories/admin_repository.dart';
 
 part 'admin_four_image_offer_state.dart';
 

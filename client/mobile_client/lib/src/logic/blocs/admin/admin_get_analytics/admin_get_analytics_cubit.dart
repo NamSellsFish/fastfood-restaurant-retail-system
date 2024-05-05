@@ -1,7 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:flutter_amazon_clone_bloc/src/data/models/sales.dart';
-import 'package:flutter_amazon_clone_bloc/src/data/repositories/admin_repository.dart';
+import '/src/data/models/sales.dart';
+import '/src/data/repositories/admin_repository.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 
 part 'admin_get_analytics_state.dart';

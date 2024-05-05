@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_amazon_clone_bloc/src/logic/blocs/account/keep_shopping_for/cubit/keep_shopping_for_cubit.dart';
-import 'package:flutter_amazon_clone_bloc/src/presentation/widgets/common_widgets/custom_app_bar.dart';
-import 'package:flutter_amazon_clone_bloc/src/presentation/widgets/common_widgets/single_listing_product.dart';
-import 'package:flutter_amazon_clone_bloc/src/utils/utils.dart';
+import '/src/logic/blocs/account/keep_shopping_for/cubit/keep_shopping_for_cubit.dart';
+import '/src/presentation/widgets/common_widgets/custom_app_bar.dart';
+import '/src/presentation/widgets/common_widgets/single_listing_product.dart';
+import '/src/utils/utils.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class BrowsingHistory extends StatelessWidget {

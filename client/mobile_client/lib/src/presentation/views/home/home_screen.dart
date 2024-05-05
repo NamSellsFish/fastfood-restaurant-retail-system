@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_amazon_clone_bloc/src/logic/blocs/admin/admin_add_offers/four-images-offer/admin_four_image_offer_cubit.dart';
-import 'package:flutter_amazon_clone_bloc/src/logic/blocs/home_blocs/carousel_bloc/carousel_image_bloc.dart';
-import 'package:flutter_amazon_clone_bloc/src/logic/blocs/user_cubit/user_cubit.dart';
-import 'package:flutter_amazon_clone_bloc/src/presentation/widgets/common_widgets/custom_app_bar.dart';
-import 'package:flutter_amazon_clone_bloc/src/presentation/widgets/home/address_bar.dart';
-import 'package:flutter_amazon_clone_bloc/src/presentation/widgets/home/carousel_image.dart';
-import 'package:flutter_amazon_clone_bloc/src/presentation/widgets/home/deal_of_the_day.dart';
-import 'package:flutter_amazon_clone_bloc/src/presentation/widgets/home/multi_image_offer.dart';
-import 'package:flutter_amazon_clone_bloc/src/presentation/widgets/home/top_categories.dart';
-import 'package:flutter_amazon_clone_bloc/src/utils/constants/constants.dart';
-import 'package:flutter_amazon_clone_bloc/src/utils/utils.dart';
+import '/src/logic/blocs/admin/admin_add_offers/four-images-offer/admin_four_image_offer_cubit.dart';
+import '/src/logic/blocs/home_blocs/carousel_bloc/carousel_image_bloc.dart';
+import '/src/logic/blocs/user_cubit/user_cubit.dart';
+import '/src/presentation/widgets/common_widgets/custom_app_bar.dart';
+import '/src/presentation/widgets/home/address_bar.dart';
+import '/src/presentation/widgets/home/carousel_image.dart';
+import '/src/presentation/widgets/home/deal_of_the_day.dart';
+import '/src/presentation/widgets/home/multi_image_offer.dart';
+import '/src/presentation/widgets/home/top_categories.dart';
+import '/src/utils/constants/constants.dart';
+import '/src/utils/utils.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class HomeScreen extends StatefulWidget {

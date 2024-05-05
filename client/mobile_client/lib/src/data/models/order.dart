@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'package:equatable/equatable.dart';
-import 'package:flutter_amazon_clone_bloc/src/data/models/product.dart';
+import '/src/data/models/product.dart';
 
 class Order extends Equatable {
   final String id;
