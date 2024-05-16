@@ -2,6 +2,11 @@ import 'package:flutter/material.dart';
 import '/src/presentation/widgets/home/single_image_offer.dart';
 
 class Constants {
+// SHIPPING CONSTANTS
+  static const double shippingRateByDistance = 0.1;
+  static const double shippingRateByWeight = 0.2;
+  static const double shippingRateByTime = 0.05;
+
 // COLORS
   static const appBarGradient = LinearGradient(
     colors: [
