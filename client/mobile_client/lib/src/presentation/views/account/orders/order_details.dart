@@ -74,8 +74,7 @@ class OrderDetailsScreen extends StatelessWidget {
                         'Order date        ${formatDate(order.orderedAt)}',
                         style: textStyle,
                       ),
-                      Text('Order #              ${order.id}',
-                          style: textStyle),
+                      Text('Order #ID         ${order.id}', style: textStyle),
                       Text(
                           'Order total        \$${formatPrice(order.totalPrice)}',
                           style: textStyle),
@@ -420,23 +419,12 @@ class OrderDetailsScreen extends StatelessWidget {
                           secondText: totalQuantity.toString(),
                           textSyle: textStyle,
                         ),
-                        const OrderSummaryRow(
-                          firstText: 'Postage & Packing:',
-                          secondText: '\$0',
-                          textSyle: textStyle,
-                        ),
-                        OrderSummaryRow(
-                          firstText: 'Sub total:',
-                          secondText:
-                              '\$${formatPriceWithDecimal(order.totalPrice)}',
-                          textSyle: textStyle,
-                        ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             const Text(
                               'Order Total:',
-                              style: headingTextSyle,
+                              style: textStyle,
                             ),
                             Text(
                               '\$${formatPriceWithDecimal(order.totalPrice)}',
@@ -530,13 +518,7 @@ class OrderSummaryRow extends StatelessWidget {
             fontWeight: FontWeight.normal,
           ),
         ),
-        Text(
-          secondText,
-          style: textSyle.copyWith(
-            color: Colors.black87,
-            fontWeight: FontWeight.normal,
-          ),
-        )
+        Text(secondText, style: textSyle)
       ],
     );
   }

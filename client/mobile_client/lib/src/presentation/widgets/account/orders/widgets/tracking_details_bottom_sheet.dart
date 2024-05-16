@@ -24,7 +24,7 @@ class TrackingDetailsBottomSheet extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const Text(
-            'Delivery by Amazon',
+            'Delivery by FastFood+',
             style: TextStyle(
                 fontSize: 22,
                 fontWeight: FontWeight.bold,
