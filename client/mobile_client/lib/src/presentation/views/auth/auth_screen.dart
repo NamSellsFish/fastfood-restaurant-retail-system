@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../widgets/auth/custom_footer_auth_button.dart';
 import '/src/config/router/app_route_constants.dart';
 import '/src/logic/blocs/auth_bloc/auth_bloc.dart';
 import '/src/logic/blocs/auth_bloc/radio_bloc/radio_bloc.dart';
@@ -20,13 +21,35 @@ class AuthScreen extends StatefulWidget {
 }
 
 class _AuthScreenState extends State<AuthScreen> {
-  // Auth _auth = Auth.signUp;
   final _signUpFormKey = GlobalKey<FormState>();
   final _signInFormKey = GlobalKey<FormState>();
 
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
   final TextEditingController _nameController = TextEditingController();
+
+  final Map<String, CustomFooterDialog> customFooterDialogMap = const {
+    'Conditions of Use': CoUDialog(),
+    'Privacy Notice': PrivacyNoticeDialog(),
+    "Help": HelpDialog(),
+  };
+
+  var _selectedDialogKey = "Conditions of Use";
+
+  // TODO: Đọc đoạn được highlight trong doc để diễn giải cho thầy: https://flutterdesignpatterns.com/pattern/factory-method
+  Future _showCustomFooterDialog(BuildContext context) async {
+    /// HINT: The application picks a creator's type depending on the current chosen button.
+    final selectedDialog = customFooterDialogMap[_selectedDialogKey];
+
+    // HINT: The client code works with an instance of a concrete creator, althought its base interface. As long as the client keeps working with the creator via the base interface, you can pass it any creator's subclass.
+    await selectedDialog!.show(context);
+  }
+
+  void _setSelectedDialogKey(String? key) {
+    if (key == null) return;
+
+    setState(() => _selectedDialogKey = key);
+  }
 
   @override
   void dispose() {
@@ -64,9 +87,6 @@ class _AuthScreenState extends State<AuthScreen> {
                 const SizedBox.square(
                   dimension: 12,
                 ),
-
-                // Sign Up Section
-
                 BlocBuilder<RadioBloc, RadioState>(
                   builder: (context, state) {
                     if (state is RadioSignUpState) {
@@ -451,7 +471,6 @@ class _AuthScreenState extends State<AuthScreen> {
                     return const SizedBox();
                   },
                 ),
-
                 const SizedBox.square(
                   dimension: 20,
                 ),
@@ -487,7 +506,10 @@ class _AuthScreenState extends State<AuthScreen> {
 
   TextButton customTextButton({String? buttonText}) {
     return TextButton(
-      onPressed: () {},
+      onPressed: () {
+        _setSelectedDialogKey(buttonText);
+        _showCustomFooterDialog(context);
+      },
       child: Text(
         buttonText!,
         style: const TextStyle(color: Color(0xff1F72C5), fontSize: 15),
