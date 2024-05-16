@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import '../../../logic/shipping_strategy.dart';
+import '../../widgets/payment/order_summary.dart';
+import '../../widgets/payment/shipping_options.dart';
 import '/src/logic/blocs/cart/cart_bloc.dart';
 import '/src/logic/blocs/order/order_cubit/order_cubit.dart';
 import '/src/logic/blocs/user_cubit/user_cubit.dart';
@@ -17,6 +20,20 @@ class PaymentScreen extends StatefulWidget {
 }
 
 class _PaymentScreenState extends State<PaymentScreen> {
+  final List<IShippingCostsStrategy> _shippingCostsStrategyList = [
+    InStorePickupStrategy(),
+    ParcelTerminalShippingStrategy(),
+    PriorityShippingStrategy(),
+  ];
+
+  var _selectedStrategyIndex = 0;
+
+  void _setSelectedStrategyIndex(int? index) {
+    if (index == null) return;
+
+    setState(() => _selectedStrategyIndex = index);
+  }
+
   final TextEditingController flatBuildingController = TextEditingController();
   final TextEditingController areaController = TextEditingController();
   final TextEditingController pincodeController = TextEditingController();
@@ -58,34 +75,43 @@ class _PaymentScreenState extends State<PaymentScreen> {
               const SizedBox(
                 height: 10,
               ),
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  const Text(
-                    'SubTotal ',
-                    style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.normal,
-                        color: Colors.black87),
-                  ),
-                  const Text(
-                    '\$',
-                    style: TextStyle(
-                        fontSize: 18,
-                        color: Colors.black87,
-                        fontWeight: FontWeight.w400),
-                  ),
-                  Text(
-                    formatPriceWithDecimal(double.parse(widget.totalAmount)),
-                    style: const TextStyle(
-                        fontSize: 22,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black87),
-                  ),
-                ],
+              const Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Address: ',
+                  style: TextStyle(
+                      fontSize: 22,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black87),
+                ),
               ),
-              const SizedBox(height: 10),
-              // if (address.isNotEmpty)
+              // Row(
+              //   crossAxisAlignment: CrossAxisAlignment.center,
+              //   children: [
+              //     const Text(
+              //       'SubTotal ',
+              //       style: TextStyle(
+              //           fontSize: 20,
+              //           fontWeight: FontWeight.normal,
+              //           color: Colors.black87),
+              //     ),
+              //     const Text(
+              //       '\$',
+              //       style: TextStyle(
+              //           fontSize: 18,
+              //           color: Colors.black87,
+              //           fontWeight: FontWeight.w400),
+              //     ),
+              //     Text(
+              //       formatPriceWithDecimal(double.parse(widget.totalAmount)),
+              //       style: const TextStyle(
+              //           fontSize: 22,
+              //           fontWeight: FontWeight.bold,
+              //           color: Colors.black87),
+              //     ),
+              //   ],
+              // ),
+              //const SizedBox(height: 10),
               BlocBuilder<OrderCubit, OrderState>(
                 builder: (context, state) {
                   if (state is OrderProcessS) {
@@ -118,9 +144,6 @@ class _PaymentScreenState extends State<PaymentScreen> {
                   return const SizedBox();
                 },
               ),
-              const SizedBox(
-                height: 20,
-              ),
               Form(
                 key: _addressFormKey,
                 child: Column(
@@ -151,6 +174,43 @@ class _PaymentScreenState extends State<PaymentScreen> {
                     )
                   ],
                 ),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              const Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Select shipping type: ',
+                  style: TextStyle(
+                      fontSize: 22,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black87),
+                ),
+              ),
+              // HINT: Shipping strategy client
+              ShippingOptions(
+                selectedIndex: _selectedStrategyIndex,
+                shippingOptions: _shippingCostsStrategyList,
+                onChanged: _setSelectedStrategyIndex,
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              const Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Order Summary: ',
+                  style: TextStyle(
+                      fontSize: 22,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black87),
+                ),
+              ),
+              OrderSummary(
+                shippingCostsStrategy:
+                    _shippingCostsStrategyList[_selectedStrategyIndex],
+                subTotal: double.parse(widget.totalAmount),
               ),
               FutureBuilder<PaymentConfiguration>(
                   future: _googlePayConfigFuture,
@@ -199,8 +259,16 @@ class _PaymentScreenState extends State<PaymentScreen> {
                                         }
                                         context.read<OrderCubit>().placeOrder(
                                             address: addressToBeUsed,
-                                            totalAmount: double.parse(
-                                                widget.totalAmount));
+                                            totalAmount: OrderSummary(
+                                                    shippingCostsStrategy:
+                                                        _shippingCostsStrategyList[
+                                                            _selectedStrategyIndex],
+                                                    subTotal: double.parse(
+                                                        widget.totalAmount))
+                                                .total);
+
+                                        //double.parse(
+                                        //    widget.totalAmount));
 
                                         if (context.mounted) {
                                           context
@@ -235,7 +303,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                                         if (_addressFormKey.currentState!
                                             .validate()) {
                                           addressToBeUsed =
-                                              '${flatBuildingController.text}, ${areaController.text}, ${cityController.text}, ${pincodeController.text}';
+                                              '${flatBuildingController.text}, ${areaController.text}, ${cityController.text}, ${pincodeController.text}}';
                                         } else {
                                           throw Exception(
                                               'Please enter all the values');
