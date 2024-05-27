@@ -20,6 +20,7 @@ class AdminOffersScreen extends StatelessWidget {
         onPressed: () =>
             context.pushNamed(AppRouteConstants.adminAddOfferScreen.name),
         toolTip: 'Add a offer',
+        icon: const Icon(Icons.add),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       body: SingleChildScrollView(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../presentation/views/chat_assistant/chat_assistant_screen.dart';
 import '/src/config/router/app_route_constants.dart';
 import '/src/data/models/order.dart';
 import '/src/data/models/product.dart';
@@ -278,4 +279,10 @@ final router = GoRouter(initialLocation: '/', routes: [
       ));
     },
   ),
+  GoRoute(
+      path: AppRouteConstants.chatAssistantScreen.path,
+      name: AppRouteConstants.chatAssistantScreen.name,
+      pageBuilder: (context, state) {
+        return const MaterialPage(child: ChatAssistantScreen());
+      })
 ]);

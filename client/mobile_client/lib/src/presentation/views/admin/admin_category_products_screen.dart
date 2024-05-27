@@ -27,6 +27,7 @@ class AdminCategoryProductsScreen extends StatelessWidget {
         onPressed: () =>
             context.pushNamed(AppRouteConstants.adminAddProductsScreen.name),
         toolTip: 'Add a product',
+        icon: const Icon(Icons.add),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       body: Scaffold(

@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import '../../../config/router/app_route_constants.dart';
+import '../admin/admin_home_screen.dart';
 import '/src/logic/blocs/bottom_bar/bottom_bar_bloc.dart';
 import '/src/logic/blocs/cart/cart_bloc.dart';
 import '/src/logic/blocs/user_cubit/user_cubit.dart';
@@ -37,6 +40,12 @@ class BottomBar extends StatelessWidget {
       if (state is BottomBarMoreClickedState) {
         return Scaffold(
             body: Scaffold(
+              floatingActionButton: CustomFloatingActionButton(
+                onPressed: () => context
+                    .pushNamed(AppRouteConstants.chatAssistantScreen.name),
+                toolTip: 'Chat with our AI',
+                icon: const Icon(Icons.chat_outlined),
+              ),
               body: GestureDetector(
                 onTap: () {
                   BlocProvider.of<BottomBarBloc>(context)
@@ -97,6 +106,12 @@ class BottomBar extends StatelessWidget {
       }
       if (state is BottomBarPageState) {
         return Scaffold(
+            floatingActionButton: CustomFloatingActionButton(
+              onPressed: () =>
+                  context.pushNamed(AppRouteConstants.chatAssistantScreen.name),
+              toolTip: 'Chat with our AI',
+              icon: const Icon(Icons.chat_outlined),
+            ),
             body: pages[state.index],
             bottomNavigationBar: CustomBottomNavBar(
               currentIndex: state.index,

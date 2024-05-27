@@ -1,5 +1,7 @@
 part of 'radio_bloc.dart';
 
+enum Auth { signIn, signUp }
+
 sealed class RadioState extends Equatable {
   const RadioState();
 

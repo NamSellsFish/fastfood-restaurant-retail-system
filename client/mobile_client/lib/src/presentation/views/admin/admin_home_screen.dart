@@ -48,6 +48,7 @@ class AdminHomeScreen extends StatelessWidget {
         onPressed: () =>
             context.pushNamed(AppRouteConstants.adminAddProductsScreen.name),
         toolTip: 'Add a product',
+        icon: const Icon(Icons.add),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
@@ -59,10 +60,12 @@ class CustomFloatingActionButton extends StatelessWidget {
     super.key,
     required this.onPressed,
     required this.toolTip,
+    required this.icon,
   });
 
   final void Function()? onPressed;
   final String toolTip;
+  final Icon icon;
 
   @override
   Widget build(BuildContext context) {
@@ -71,7 +74,7 @@ class CustomFloatingActionButton extends StatelessWidget {
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
       backgroundColor: Constants.selectedNavBarColor,
       tooltip: toolTip,
-      child: const Icon(Icons.add),
+      child: icon,
     );
   }
 }

@@ -86,6 +86,13 @@ class _PaymentScreenBuyNowState extends State<PaymentScreenBuyNow> {
                         fontWeight: FontWeight.bold,
                         color: Colors.black87),
                   ),
+                  const Text(
+                    '    .....Waiting for implementation like payment in cart...',
+                    style: TextStyle(
+                        fontSize: 18,
+                        color: Colors.yellow,
+                        fontWeight: FontWeight.w400),
+                  ),
                 ],
               ),
               const SizedBox(height: 10),

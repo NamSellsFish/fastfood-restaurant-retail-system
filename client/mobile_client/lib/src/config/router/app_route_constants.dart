@@ -68,4 +68,7 @@ class AppRouteConstants {
 
   static const adminAddOfferScreen =
       AppRoute(name: 'admin-add-offer-screen', path: '/admin-add-offer-screen');
+
+  static const chatAssistantScreen =
+      AppRoute(name: 'chat-assistant-screen', path: '/chat-assistant-screen');
 }
