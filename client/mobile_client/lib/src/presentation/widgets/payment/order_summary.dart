@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_amazon_clone_bloc/src/utils/constants/constants.dart';
 import '../../../logic/shipping_strategy.dart';
 import 'order_summary_row.dart';
 

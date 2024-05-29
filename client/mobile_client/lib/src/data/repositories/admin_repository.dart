@@ -7,7 +7,6 @@ import '/src/data/models/order.dart';
 import '/src/data/models/product.dart';
 import '/src/data/models/sales.dart';
 import '/src/utils/utils.dart';
-import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:http/http.dart' as http;
 
 class AdminRepository {
