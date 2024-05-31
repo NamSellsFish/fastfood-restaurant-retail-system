@@ -278,11 +278,11 @@ class _PaymentScreenState extends State<PaymentScreen> {
                                         }
                                       },
                                       style: ButtonStyle(
-                                        maximumSize: MaterialStateProperty.all(
+                                        maximumSize: WidgetStateProperty.all(
                                           const Size(double.infinity, 50),
                                         ),
                                         backgroundColor:
-                                            MaterialStateProperty.all(
+                                            WidgetStateProperty.all(
                                                 Colors.black),
                                       ),
                                       child: const Text(
@@ -356,11 +356,11 @@ class _PaymentScreenState extends State<PaymentScreen> {
                                   ElevatedButton(
                                       onPressed: null,
                                       style: ButtonStyle(
-                                        maximumSize: MaterialStateProperty.all(
+                                        maximumSize: WidgetStateProperty.all(
                                           const Size(double.infinity, 50),
                                         ),
                                         backgroundColor:
-                                            MaterialStateProperty.all(
+                                            WidgetStateProperty.all(
                                                 Colors.grey.shade300),
                                       ),
                                       child: const Text(
@@ -385,11 +385,11 @@ class _PaymentScreenState extends State<PaymentScreen> {
                                 ElevatedButton(
                                     onPressed: null,
                                     style: ButtonStyle(
-                                      maximumSize: MaterialStateProperty.all(
+                                      maximumSize: WidgetStateProperty.all(
                                         const Size(double.infinity, 50),
                                       ),
                                       backgroundColor:
-                                          MaterialStateProperty.all(
+                                          WidgetStateProperty.all(
                                               Colors.grey.shade300),
                                     ),
                                     child: const Text(

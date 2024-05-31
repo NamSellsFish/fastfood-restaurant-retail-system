@@ -11,6 +11,7 @@ import '/src/utils/constants/constants.dart';
 import '/src/utils/utils.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
+import 'package:flutter_amazon_clone_bloc/src/presentation/views/auth/keys.dart' as auth_screen_keys;
 
 // enum Auth { signIn, signUp }
 
@@ -80,6 +81,7 @@ class _AuthScreenState extends State<AuthScreen> {
                   'assets/images/amazon_in_altt.png',
                   height: 100,
                   width: 50,
+                  key: auth_screen_keys.logoKey,
                 ),
                 const SizedBox.square(
                   dimension: 12,
@@ -116,6 +118,7 @@ class _AuthScreenState extends State<AuthScreen> {
                                     leading: SizedBox.square(
                                       dimension: 12,
                                       child: Radio(
+                                          key: auth_screen_keys.createAccountKey,
                                           value: Auth.signUp,
                                           groupValue:
                                               snapshot.data is RadioSignUpState
@@ -281,10 +284,12 @@ class _AuthScreenState extends State<AuthScreen> {
                               child: Column(
                                 children: [
                                   ListTile(
+                                    
                                     minLeadingWidth: 2,
                                     leading: SizedBox.square(
                                       dimension: 12,
                                       child: Radio(
+                                          key: auth_screen_keys.signInKey,
                                           value: Auth.signIn,
                                           groupValue:
                                               snapshot.data is RadioSignUpState
@@ -927,3 +932,4 @@ class _AuthScreenState extends State<AuthScreen> {
     );
   }
 }
+

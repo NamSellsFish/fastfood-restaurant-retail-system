@@ -9,9 +9,14 @@ part 'search_state.dart';
 
 class SearchBloc extends Bloc<SearchEvent, SearchState> {
   final ProductsRepository searchProductsRepository;
-  final AccountRepository accountRepository = AccountRepository();
+  final AccountRepository accountRepository;
 
-  SearchBloc(this.searchProductsRepository) : super(SearchLoadingS()) {
+  SearchBloc(ProductsRepository searchProductsRepository)
+      : this.createInjected(searchProductsRepository, AccountRepository());
+
+  SearchBloc.createInjected(
+      this.searchProductsRepository, this.accountRepository)
+      : super(SearchLoadingS()) {
     on<SearchEvent>(_searchEventHandler);
   }
 

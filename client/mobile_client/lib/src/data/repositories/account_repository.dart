@@ -179,7 +179,7 @@ class AccountRepository {
     try {
       bool isDeleted = false;
 
-      http.Response res = await accountApis.deletFromWishList(product: product);
+      http.Response res = await accountApis.deleteFromWishList(product: product);
 
       if (res.statusCode == 200) {
         isDeleted = true;

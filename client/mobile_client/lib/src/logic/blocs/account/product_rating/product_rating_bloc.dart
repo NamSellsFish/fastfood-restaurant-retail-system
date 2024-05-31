@@ -31,7 +31,7 @@ class ProductRatingBloc
     try {
       emit(const GetProductRatingInitialS(initialRating: -1));
 
-      List<double> ratingsList = [];
+      List<double> ratingsList;
       ratingsList = await _getProductRatingList(event.order);
 
       emit(GetProductRatingSuccessS(ratingsList: ratingsList));
@@ -43,7 +43,7 @@ class ProductRatingBloc
   // rate product and fetch ratings again
   void _onRateProductPressedHandler(event, emit) async {
     try {
-      List<double> ratingsList = [];
+      List<double> ratingsList;
       ratingsList = await _getProductRatingList(event.order);
       emit(RateProductInitialS(ratingsList: ratingsList));
 

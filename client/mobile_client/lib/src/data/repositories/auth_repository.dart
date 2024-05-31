@@ -6,7 +6,7 @@ import 'package:http/http.dart' as http;
 class AuthRepository {
   final AuthAPI authApi = AuthAPI();
 
-  Future<User> singUpUser(User inputUser) async {
+  Future<User> signUpUser(User inputUser) async {
     try {
       http.Response res = await authApi.signUpUser(inputUser);
 

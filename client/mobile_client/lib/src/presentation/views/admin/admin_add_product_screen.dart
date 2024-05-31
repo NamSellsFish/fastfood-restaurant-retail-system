@@ -141,7 +141,7 @@ class _AdminAddProductScreenState extends State<AdminAddProductScreen> {
                                       .read<AdminAddProductsImagesBloc>()
                                       .add(SelectImagesPressedE()),
                                   style: const ButtonStyle(
-                                      side: MaterialStatePropertyAll(BorderSide(
+                                      side: WidgetStatePropertyAll(BorderSide(
                                           width: 1,
                                           color: Constants.secondaryColor))),
                                   icon: const Icon(Icons.add),

@@ -28,7 +28,7 @@ class _ChatAssistantScreenState extends State<ChatAssistantScreen> {
 
   @override
   Widget build(BuildContext context) {
-    Future<void> _sendChatMessage(String message) async {
+    Future<void> sendChatMessage(String message) async {
       setState(() {
         _loading = true;
       });
@@ -92,7 +92,7 @@ class _ChatAssistantScreenState extends State<ChatAssistantScreen> {
                             text: text, isFromUser: content.role == 'user');
                       })),
               Padding(
-                padding: EdgeInsets.symmetric(vertical: 25, horizontal: 15),
+                padding: const EdgeInsets.symmetric(vertical: 25, horizontal: 15),
                 child: Row(children: [
                   Expanded(
                     child: TextField(
@@ -100,7 +100,7 @@ class _ChatAssistantScreenState extends State<ChatAssistantScreen> {
                         focusNode: _textFieldFocus,
                         decoration: textFieldDecoration(),
                         controller: _textController,
-                        onSubmitted: _sendChatMessage),
+                        onSubmitted: sendChatMessage),
                   )
                 ]),
               )
@@ -112,7 +112,7 @@ class _ChatAssistantScreenState extends State<ChatAssistantScreen> {
   InputDecoration textFieldDecoration() {
     return InputDecoration(
       hintText: 'Ask anything...',
-      contentPadding: EdgeInsets.symmetric(horizontal: 15),
+      contentPadding: const EdgeInsets.symmetric(horizontal: 15),
       border: OutlineInputBorder(
         borderRadius: BorderRadius.circular(14),
         borderSide: BorderSide(color: Theme.of(context).colorScheme.secondary),

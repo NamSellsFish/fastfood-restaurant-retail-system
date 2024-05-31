@@ -161,7 +161,7 @@ class AccountApis {
     }
   }
 
-  Future<http.Response> deletFromWishList({required Product product}) async {
+  Future<http.Response> deleteFromWishList({required Product product}) async {
     final String token = await getToken();
     try {
       http.Response res = await client.delete(

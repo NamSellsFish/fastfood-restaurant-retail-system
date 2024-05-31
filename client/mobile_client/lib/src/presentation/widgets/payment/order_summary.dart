@@ -6,7 +6,7 @@ class OrderSummary extends StatelessWidget {
   final double subTotal;
   final IShippingCostsStrategy shippingCostsStrategy;
 
-  const OrderSummary({
+  const OrderSummary({super.key, 
     required this.subTotal,
     required this.shippingCostsStrategy,
   });
