@@ -1,5 +1,5 @@
 // HINT: Implementation of shipping using strategy pattern
-import 'package:flutter_amazon_clone_bloc/src/logic/shipping_template_method.dart';
+import 'package:fast_food_plus/src/logic/shipping_template_method.dart';
 
 abstract interface class IShippingCostsStrategy {
   late String label;

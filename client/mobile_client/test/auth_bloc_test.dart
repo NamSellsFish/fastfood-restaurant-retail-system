@@ -1,5 +1,5 @@
-import 'package:flutter_amazon_clone_bloc/src/data/repositories/auth_repository.dart';
-import 'package:flutter_amazon_clone_bloc/src/logic/blocs/auth_bloc/auth_bloc.dart';
+import 'package:fast_food_plus/src/data/repositories/auth_repository.dart';
+import 'package:fast_food_plus/src/logic/blocs/auth_bloc/auth_bloc.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:bloc_test/bloc_test.dart';
 import 'package:mocktail/mocktail.dart';
@@ -23,7 +23,7 @@ void main() async {
     setUp(() => bloc = AuthBloc(repo));
 
     blocTest<AuthBloc, AuthState>(
-      'Valid account creation credentials:' 
+      'Valid account creation credentials:'
       'Emits TextFieldValidState'
       'When TextFieldChangedEvent is added.',
       build: () => bloc,
@@ -33,12 +33,13 @@ void main() async {
         user.password,
       )),
       expect: () => <AuthState>[
-        TextFieldValidState(emailValue: user.email, passwordValue: user.password)
+        TextFieldValidState(
+            emailValue: user.email, passwordValue: user.password)
       ],
     );
 
-
-    Iterable<(String name, String email, String password)> getInvalidCredentials() sync* {
+    Iterable<(String name, String email, String password)>
+        getInvalidCredentials() sync* {
       yield ('', user.email, user.password);
       yield (user.name, '', user.password);
       yield (user.name, user.email, '');
@@ -46,7 +47,7 @@ void main() async {
 
     for (var credentials in getInvalidCredentials()) {
       blocTest<AuthBloc, AuthState>(
-        'Invalid account creation credentials: $credentials' 
+        'Invalid account creation credentials: $credentials'
         'Emits TextFieldInvalidState'
         'When TextFieldChangedEvent is added.',
         build: () => bloc,
@@ -55,14 +56,12 @@ void main() async {
           credentials.$2,
           credentials.$3,
         )),
-        expect: () => [
-          isA<TextFieldErrorState>()
-        ],
+        expect: () => [isA<TextFieldErrorState>()],
       );
     }
 
     blocTest<AuthBloc, AuthState>(
-      'Valid account creation credentials:' 
+      'Valid account creation credentials:'
       'Emits [AuthLoadingState, CreateUserInProgressState, CreateUserSuccessState]'
       'When CreateAccountPressedEvent is added.',
       build: () => bloc,
