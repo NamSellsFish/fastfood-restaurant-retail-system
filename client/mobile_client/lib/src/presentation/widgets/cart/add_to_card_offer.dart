@@ -94,12 +94,12 @@ class AddToCartOffer extends StatelessWidget {
                     .add(AddToCartFromBottomSheet(product: product));
               },
               style: const ButtonStyle(
-                  padding: WidgetStatePropertyAll(EdgeInsets.zero),
-                  minimumSize: WidgetStatePropertyAll(Size(100, 35)),
-                  maximumSize: WidgetStatePropertyAll(Size(100, 35)),
-                  fixedSize: WidgetStatePropertyAll(Size(100, 35)),
+                  padding: MaterialStatePropertyAll(EdgeInsets.zero),
+                  minimumSize: MaterialStatePropertyAll(Size(100, 35)),
+                  maximumSize: MaterialStatePropertyAll(Size(100, 35)),
+                  fixedSize: MaterialStatePropertyAll(Size(100, 35)),
                   backgroundColor:
-                      WidgetStatePropertyAll(Constants.yellowColor)),
+                      MaterialStatePropertyAll(Constants.yellowColor)),
               child: const Text(
                 'Add to Cart',
                 style: TextStyle(
