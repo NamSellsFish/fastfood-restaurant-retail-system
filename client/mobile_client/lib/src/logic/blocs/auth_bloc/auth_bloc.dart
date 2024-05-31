@@ -53,7 +53,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     );
 
     try {
-      User resUser = await authRepository.singUpUser(user);
+      User resUser = await authRepository.signUpUser(user);
 
       emit(CreateUserInProgressState(user: resUser));
 

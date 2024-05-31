@@ -12,15 +12,13 @@ class OrderCubit extends Cubit<OrderState> {
 
   void addPaymentItem({required String totalAmount}) async {
     try {
-      List<PaymentItem> paymentItemList = [];
-      User user;
 
-      paymentItemList.add(PaymentItem(
+      final paymentItemList = List<PaymentItem>.generate(1, (_) => PaymentItem(
           amount: totalAmount,
           label: 'Total Amount',
           status: PaymentItemStatus.final_price));
 
-      user = await userRepository.getUserData();
+      final user = await userRepository.getUserData();
 
       emit(OrderProcessS(paymentItems: paymentItemList, user: user));
     } catch (e) {

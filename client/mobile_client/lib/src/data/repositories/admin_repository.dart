@@ -112,7 +112,7 @@ class AdminRepository {
   Future<List<FourImagesOffer>> adminGetFourImagesOffer() async {
     try {
       List<FourImagesOffer> fourImagesOfferList = [];
-      http.Response res = await adminApi.adminGetFourImagesOffer();
+      http.Response res = await adminApi.getFourImagesOffer();
 
       if (res.statusCode == 200) {
         for (int i = 0; i < jsonDecode(res.body).length; i++) {

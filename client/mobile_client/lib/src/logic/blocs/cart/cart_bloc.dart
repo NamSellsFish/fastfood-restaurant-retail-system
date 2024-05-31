@@ -9,8 +9,11 @@ part 'cart_state.dart';
 
 class CartBloc extends Bloc<CartEvent, CartState> {
   final UserRepository userRepository;
-  final AccountRepository accountRepository = AccountRepository();
-  CartBloc(this.userRepository) : super(CartLoadingS()) {
+  final AccountRepository accountRepository;
+  CartBloc(UserRepository userRepository) : this.createInjected(userRepository, AccountRepository());
+
+  CartBloc.createInjected(this.userRepository, this.accountRepository)
+      : super(CartLoadingS()) {
     on<GetCartPressed>(_onGetCartHandler);
     on<AddToCart>(_onAddToCartHandler);
     on<AddToCartFromBottomSheet>(_onAddToCartFromBottomSheetHandler);

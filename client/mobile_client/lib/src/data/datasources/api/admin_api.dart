@@ -129,11 +129,11 @@ class AdminApi {
     }
   }
 
-  Future<http.Response> adminGetFourImagesOffer() async {
+  Future<http.Response> getFourImagesOffer() async {
     final String token = await getToken();
     try {
       http.Response res = await client.get(
-        Uri.parse(adminGetFourImagesOfferUri),
+        Uri.parse(getFourImagesOfferUri),
         headers: {
           'Content-Type': 'application/json; charset=UTF-8',
           'x-auth-token': token,

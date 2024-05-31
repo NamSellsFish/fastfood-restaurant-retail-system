@@ -9,7 +9,7 @@ class RadioBloc extends Bloc<RadioEvent, RadioState> {
     on<RadioChangedEvent>(_onRadioChangedHandler);
   }
 
-  void _onRadioChangedHandler(event, emit) {
+  void _onRadioChangedHandler(RadioChangedEvent event, Emitter<RadioState> emit) {
     if (event.auth == Auth.signIn) {
       emit(RadioSignInState(auth: event.auth));
     } else {

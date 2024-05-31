@@ -43,6 +43,8 @@ String getUserDataUri = '$uri/';
 String orderUri = '$uri/api/order';
 String placeOrderBuyNowUri = '$uri/api/place-order-buy-now';
 
+String getFourImagesOfferUri = '$uri/api/get-four-images-offer';
+
 //admin
 String adminGetCategoryProductsUri = '$uri/admin/get-category-product';
 String adminDeleteProductUri = '$uri/admin/delete-product';
@@ -51,5 +53,5 @@ String adminChangeOrderStatusUri = '$uri/admin/change-order-status';
 String adminGetAnalyticsUri = '$uri/admin/analytics';
 String adminAddProductsUri = '$uri/admin/add-product';
 String adminAddFourImagesOfferUri = '$uri/admin/add-four-images-offer';
-String adminGetFourImagesOfferUri = '$uri/api/get-four-images-offer';
+
 String adminDeleteFourImagesOfferUri = '$uri/admin/delete-four-images-offer';

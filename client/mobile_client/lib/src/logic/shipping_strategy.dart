@@ -22,7 +22,7 @@ class ParcelTerminalShippingStrategy implements IShippingCostsStrategy {
 
   @override
   double calculate(double subTotal) =>
-      ParcelTerminalShippingFeeCalculator().calculate(subTotal);
+      const ParcelTerminalShippingFeeCalculator().calculate(subTotal);
 }
 
 class PriorityShippingStrategy implements IShippingCostsStrategy {
