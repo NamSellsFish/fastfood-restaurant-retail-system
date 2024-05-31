@@ -2,7 +2,7 @@ const express = require("express");
 const productRouter = express.Router();
 const auth = require("../middlewares/auth");
 const { Product } = require("../model/product");
-const Rating = require("../model/rating");
+const { Rating } = require("../model/rating");
 
 productRouter.get("/api/products", auth, async (req, res) => {
   try {
@@ -36,16 +36,20 @@ productRouter.post("/api/rate-product", auth, async (req, res) => {
       }
     }
 
-    const ratingSchema = {
+    const ratingRecord = {
       userId: req.user,
       rating,
     };
 
-    product.ratings.push(ratingSchema);
+    let ratingItem = new Rating({ userId: req.user, rating });
+    ratingItem = await ratingItem.save();
+
+    product.ratings.push(ratingRecord);
     product = await product.save();
 
     res.json(product);
   } catch (e) {
+    console.log(e);
     res.status(500).json({ error: e.message });
   }
 });

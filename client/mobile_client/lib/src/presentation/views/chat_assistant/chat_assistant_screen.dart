@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_amazon_clone_bloc/src/utils/constants/strings.dart';
+import '../../../utils/constants/strings.dart';
 import 'package:google_generative_ai/google_generative_ai.dart';
 
 import '../../../utils/constants/constants.dart';

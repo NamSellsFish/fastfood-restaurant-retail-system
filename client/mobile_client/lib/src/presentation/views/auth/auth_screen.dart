@@ -92,7 +92,7 @@ class _AuthScreenState extends State<AuthScreen> {
                   dimension: 12,
                 ),
                 StreamBuilder<RadioState>(
-                    // sử dụng StreamBuilder để lắng nghe Stream
+                    // HINT: sử dụng StreamBuilder để lắng nghe Stream
                     stream: bloc.stateController
                         .stream, // truyền stream của stateController vào để lắng nghe
                     initialData: const RadioSignInState(
