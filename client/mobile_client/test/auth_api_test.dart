@@ -63,7 +63,7 @@ void main() async {
 
       try
       {  
-        await realAuthRepository.signInUser(email, "_${pass}_");
+        await realAuthRepository.signInUser("_${email}_", pass);
       }
       catch (e)
       {
