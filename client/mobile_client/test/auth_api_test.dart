@@ -53,10 +53,13 @@ void main() async {
 
     test('Signing in with wrong username', () async {
       var (email, pass) = testResources.customerCredentials;
-
-      try {
-        await realAuthRepository.signInUser(email, "_${pass}_");
-      } catch (e) {
+      
+      try
+      {  
+        await realAuthRepository.signInUser("_${email}_", pass);
+      }
+      catch (e)
+      {
         return;
       }
 
