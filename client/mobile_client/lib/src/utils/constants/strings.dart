@@ -1,6 +1,6 @@
 //final secureUri = dotenv.env['URI'];
-//const secureUri = "http://10.0.2.2:3000";
-const secureUri = "http://127.0.0.1:3000";
+const secureUri = "http://10.0.2.2:3000";
+//const secureUri = "http://127.0.0.1:3000";
 String geminiApiKey = 'AIzaSyBsbSn-0NWu1hJwWrPp_jeXOs6bQ0QM3cQ';
 String uri = secureUri;
 

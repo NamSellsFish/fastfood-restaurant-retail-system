@@ -153,6 +153,7 @@ class _AuthScreenState extends State<AuthScreen> {
                                               auth: Auth.signUp));
                                     },
                                   ),
+                                  // HINT: Sign up Form
                                   Form(
                                     key: _signUpFormKey,
                                     child: Column(children: [

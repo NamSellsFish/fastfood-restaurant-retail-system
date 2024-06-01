@@ -34,8 +34,8 @@ mongoose
     console.log(e);
   });
 
-app.get("/flutterzon", (req, res) => {
-  res.send("Welcome to Flutterzon!");
+app.get("/fast_food_plus", (req, res) => {
+  res.send("Welcome to FastFood+!");
 });
 
 app.listen(PORT, "0.0.0.0", () => {
