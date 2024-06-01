@@ -1,7 +1,6 @@
-
-import 'package:flutter_amazon_clone_bloc/src/data/repositories/account_repository.dart';
-import 'package:flutter_amazon_clone_bloc/src/data/repositories/products_repository.dart';
-import 'package:flutter_amazon_clone_bloc/src/logic/blocs/search/bloc/search_bloc.dart';
+import 'package:fast_food_plus/src/data/repositories/account_repository.dart';
+import 'package:fast_food_plus/src/data/repositories/products_repository.dart';
+import 'package:fast_food_plus/src/logic/blocs/search/bloc/search_bloc.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:bloc_test/bloc_test.dart';
 import 'package:mocktail/mocktail.dart';
@@ -31,7 +30,8 @@ void main() async {
 
     setUp(() {
       bloc = SearchBloc.createInjected(searchRepo, accountRepo);
-      badBloc = SearchBloc.createInjected(MockProductsRepository(), accountRepo);
+      badBloc =
+          SearchBloc.createInjected(MockProductsRepository(), accountRepo);
     });
 
     blocTest<SearchBloc, SearchState>(

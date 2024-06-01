@@ -1,6 +1,6 @@
-import 'package:flutter_amazon_clone_bloc/src/data/models/order.dart';
-import 'package:flutter_amazon_clone_bloc/src/data/models/product.dart';
-import 'package:flutter_amazon_clone_bloc/src/logic/blocs/account/product_rating/product_rating_bloc.dart';
+import 'package:fast_food_plus/src/data/models/order.dart';
+import 'package:fast_food_plus/src/data/models/product.dart';
+import 'package:fast_food_plus/src/logic/blocs/account/product_rating/product_rating_bloc.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:bloc_test/bloc_test.dart';
 import 'package:mocktail/mocktail.dart';
@@ -62,12 +62,13 @@ void main() async {
   orderBuilder.products = [testResources.product, testResources.product];
 
   when(() => repo.getProductRating(any())).thenAnswer((_) async => rating);
-  
-  when(() => repo.rateProduct(product: any(named: 'product'), rating: any(named: 'rating')))
-      .thenAnswer((_) async {
-        when(() => repo.getProductRating(any())).thenAnswer((_) async => newRating);
-      });
-  
+
+  when(() => repo.rateProduct(
+      product: any(named: 'product'),
+      rating: any(named: 'rating'))).thenAnswer((_) async {
+    when(() => repo.getProductRating(any())).thenAnswer((_) async => newRating);
+  });
+
   setUp(() {
     bloc = ProductRatingBloc(repo);
   });
@@ -75,7 +76,6 @@ void main() async {
   final order = orderBuilder.toOrder();
 
   group(ProductRatingBloc, () {
-
     blocTest<ProductRatingBloc, ProductRatingState>(
       'Get product ratings:'
       'Emits [GetProductRatingInitialS, GetProductRatingSuccessS]'
@@ -93,12 +93,12 @@ void main() async {
       'Emits [RateProductInitialS, RateProductSuccessS] with correct new values'
       'When RateProductPressedEvent is added.',
       build: () => bloc,
-      act: (bloc) => bloc.add(RateProductPressedEvent(order: order, product: testResources.product, rating: newRating)),
+      act: (bloc) => bloc.add(RateProductPressedEvent(
+          order: order, product: testResources.product, rating: newRating)),
       expect: () => [
         const RateProductInitialS(ratingsList: [rating, rating]),
         const RateProductSuccessS(updatedRatingsList: [newRating, newRating])
       ],
     );
-
   });
 }

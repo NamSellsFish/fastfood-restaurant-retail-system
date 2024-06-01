@@ -1,7 +1,6 @@
-
-import 'package:flutter_amazon_clone_bloc/src/data/models/product.dart';
-import 'package:flutter_amazon_clone_bloc/src/data/repositories/user_repository.dart';
-import 'package:flutter_amazon_clone_bloc/src/logic/blocs/cart/cart_bloc.dart';
+import 'package:fast_food_plus/src/data/models/product.dart';
+import 'package:fast_food_plus/src/data/repositories/user_repository.dart';
+import 'package:fast_food_plus/src/logic/blocs/cart/cart_bloc.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:bloc_test/bloc_test.dart';
 import 'package:mocktail/mocktail.dart';
@@ -9,6 +8,7 @@ import 'search_bloc_test.dart';
 import 'test_resources.dart';
 
 class MockUserRepository extends Mock implements UserRepository {}
+
 class TestCart {
   List<Product> products = [];
   List<int> quantities = [];
@@ -23,11 +23,11 @@ class TestCartInfo {
   List<int> quantities = [];
   List<Product> saveForLaterProducts = [];
 
-  List<dynamic> get items => [sum, products, averageRatingList, quantities, saveForLaterProducts];
+  List<dynamic> get items =>
+      [sum, products, averageRatingList, quantities, saveForLaterProducts];
 }
 
 void main() async {
-
   final user = await testResources.customer;
 
   registerFallbackValue(user);
@@ -52,11 +52,13 @@ void main() async {
     testCartInfo.averageRatingList = [rating];
 
     when(() => userRepo.getCart()).thenAnswer((_) async => testCart.items);
-    when(() => userRepo.getSaveForLater()).thenAnswer((_) async => testCartInfo.saveForLaterProducts);
-    when(() => accountRepo.getAverageRating(any())).thenAnswer((_) async => rating);
+    when(() => userRepo.getSaveForLater())
+        .thenAnswer((_) async => testCartInfo.saveForLaterProducts);
+    when(() => accountRepo.getAverageRating(any()))
+        .thenAnswer((_) async => rating);
 
     setUp(() => bloc = CartBloc.createInjected(userRepo, accountRepo));
-  
+
     blocTest<CartBloc, CartState>(
       'Get cart:'
       'Emits [CartLoadingS, CartSuccessS]'
@@ -66,14 +68,12 @@ void main() async {
       expect: () => <CartState>[
         CartLoadingS(),
         CartProductSuccessS(
-          total: testCartInfo.sum,
-          cartProducts: testCartInfo.products,
-          averageRatingList: testCartInfo.averageRatingList,
-          productsQuantity: testCartInfo.quantities,
-          saveForLaterProducts: testCartInfo.saveForLaterProducts
-        )
+            total: testCartInfo.sum,
+            cartProducts: testCartInfo.products,
+            averageRatingList: testCartInfo.averageRatingList,
+            productsQuantity: testCartInfo.quantities,
+            saveForLaterProducts: testCartInfo.saveForLaterProducts)
       ],
     );
-  
-  });  
+  });
 }

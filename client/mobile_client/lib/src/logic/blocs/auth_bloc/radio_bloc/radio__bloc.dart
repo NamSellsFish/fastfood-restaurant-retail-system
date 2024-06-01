@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:flutter_amazon_clone_bloc/src/logic/blocs/auth_bloc/radio_bloc/radio_bloc.dart';
+import 'package:fast_food_plus/src/logic/blocs/auth_bloc/radio_bloc/radio_bloc.dart';
 
 class RadioBloc_ {
   // ignore: prefer_typing_uninitialized_variables

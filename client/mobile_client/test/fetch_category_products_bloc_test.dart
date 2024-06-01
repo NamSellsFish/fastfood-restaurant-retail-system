@@ -1,7 +1,7 @@
 import 'dart:math';
 
-import 'package:flutter_amazon_clone_bloc/src/data/repositories/category_products_repository.dart';
-import 'package:flutter_amazon_clone_bloc/src/logic/blocs/category_products/fetch_category_products_bloc/fetch_category_products_bloc.dart';
+import 'package:fast_food_plus/src/data/repositories/category_products_repository.dart';
+import 'package:fast_food_plus/src/logic/blocs/category_products/fetch_category_products_bloc/fetch_category_products_bloc.dart';
 import 'package:bloc_test/bloc_test.dart';
 import 'package:mocktail/mocktail.dart';
 import 'search_bloc_test.dart';

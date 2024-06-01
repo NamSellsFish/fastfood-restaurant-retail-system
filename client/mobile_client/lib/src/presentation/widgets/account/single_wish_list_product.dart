@@ -140,7 +140,7 @@ class SingleWishListProduct extends StatelessWidget {
                                     .addToCartFromWishList(product: product!);
                               },
                               style: const ButtonStyle(
-                                  backgroundColor: WidgetStatePropertyAll(
+                                  backgroundColor: MaterialStatePropertyAll(
                                       Constants.yellowColor)),
                               child: const Text(
                                 'Add to cart',

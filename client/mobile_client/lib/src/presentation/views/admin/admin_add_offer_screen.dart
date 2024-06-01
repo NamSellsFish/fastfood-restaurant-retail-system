@@ -137,7 +137,7 @@ class AdminAddOfferScreen extends StatelessWidget {
                                           .read<AdminAddProductsImagesBloc>()
                                           .add(SelectImagesPressedE()),
                                       style: const ButtonStyle(
-                                          side: WidgetStatePropertyAll(
+                                          side: MaterialStatePropertyAll(
                                               BorderSide(
                                                   width: 1,
                                                   color: Constants

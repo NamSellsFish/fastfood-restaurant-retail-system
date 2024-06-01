@@ -1,7 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_amazon_clone_bloc/src/utils/constants/constants.dart';
+import 'package:fast_food_plus/src/utils/constants/constants.dart';
 
 abstract class ShippingFeeCalculator {
   const ShippingFeeCalculator();
